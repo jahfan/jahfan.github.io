@@ -1,4 +1,6 @@
+## Title: Anthony Jackson's Github Page.
 ## Welcome to Anthony Jackson's github page.
+## Page to showcase all of my work on github.
 
 You can use the [editor on GitHub](https://github.com/jahfan/jahfan.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
