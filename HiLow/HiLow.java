@@ -38,7 +38,7 @@ public class HiLow {
         /*
             while(guess != random#) {
                 
-                if (guess > 100 || gues < 0)
+                if (guess > 100 || guess < 0)
                     Sys.out.print("Not in range!")
                 else if(guess < random#)
                     System.out.print("Too Low")    
