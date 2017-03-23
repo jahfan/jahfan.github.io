@@ -37,20 +37,22 @@ public class HiLow {
 
         /*
             while(guess != random#) {
-                if(guess < random#)
-                    System.out.print("Too Low")
-                else if (guees > 100)
+                
+                if (guess > 100)
                     Sys.out.print("Not in range!")
+                else if(guess < random#)
+                    System.out.print("Too Low")    
                 else
                     Sys.out.print("Too High!")    
             }*/
         while(this.intGuess != this.intNumber) {
             
-            if(this.intGuess < this.intNumber) {
-                System.out.println("Oh no! Your guess was too low! Please try again. You can do it!");
-            }
-            else if(this.intGuess > 100) {
+            
+            if(this.intGuess > 100 || this.intGuess < 0) {
                 System.out.println("Oh no! Your number is outside of range! Please pick a number between 1 and 100.");
+            }
+            else if(this.intGuess < this.intNumber) {
+                System.out.println("Oh no! Your guess was too low! Please try again. You can do it!");
             }
             else {
               System.out.println("Oh no! Your guess was too high! Please try again. You can do it!");  
