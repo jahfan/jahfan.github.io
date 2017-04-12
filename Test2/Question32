@@ -1,0 +1,94 @@
+//
+// Name: Anthony Jackson
+// Date: 4/11/17
+// Program: Memo.java (Question 31)
+// Class with functions to get/set Year, Month, Message or all at once. + a toString method. Main method to show how class works. Checks for invalid months/
+//
+
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import javax.swing.text.TabStop;
+
+public class Memo {
+
+        int intYear = 0000;
+        String strMonth = "None";
+        String strMessage = "Nothing";
+        
+        ArrayList<String> aryMemos = new ArrayList<String>(); 
+        Scanner objScannerYear = new Scanner(System.in);
+        Scanner objScannerMonth = new Scanner(System.in);
+        Scanner objScannerMessage = new Scanner(System.in);
+
+        public void setYear(int pintYear) {
+            
+            this.intYear = pintYear;
+        }
+        public int getYear() {
+            return intYear;
+        }
+
+        public void setMonth(String pstrMonth) {
+            this.strMonth = pstrMonth;
+        }
+        public String getMonth() {
+            return strMonth;
+        }
+
+        public void setMessage(String pstrMessage) {
+            strMessage = pstrMessage;
+        }
+        public String getMessage() {
+            return strMessage;
+        }
+
+        public String toString() {
+            return strMonth + ", " + intYear + ": " + strMessage;
+        }
+
+        public void setAll() {
+
+            System.out.println("Please set a year.");
+            intYear = objScannerYear.nextInt();
+
+
+            System.out.println("Please set a month. Both the full name and shorted versions (First threee letters) are accepted.");
+            do {
+                this.strMonth = objScannerMonth.next();
+
+                if(strMonth.compareToIgnoreCase("January") != 0 && strMonth.compareToIgnoreCase("February") != 0 && strMonth.compareToIgnoreCase("March") != 0 &&
+                    strMonth.compareToIgnoreCase("April") != 0 && strMonth.compareToIgnoreCase("May") != 0 && strMonth.compareToIgnoreCase("June") != 0 &&
+                    strMonth.compareToIgnoreCase("July") != 0 && strMonth.compareToIgnoreCase("August") != 0 && strMonth.compareToIgnoreCase("September") != 0 &&
+                    strMonth.compareToIgnoreCase("October") != 0 && strMonth.compareToIgnoreCase("November") != 0 && strMonth.compareToIgnoreCase("December") != 0 &&
+                    strMonth.compareToIgnoreCase("Jan") != 0 && strMonth.compareToIgnoreCase("Feb") != 0 && strMonth.compareToIgnoreCase("Mar") != 0 &&
+                    strMonth.compareToIgnoreCase("Apr") != 0 && strMonth.compareToIgnoreCase("May") != 0 && strMonth.compareToIgnoreCase("Jun") != 0 &&
+                    strMonth.compareToIgnoreCase("Jul") != 0 && strMonth.compareToIgnoreCase("Aug") != 0 && strMonth.compareToIgnoreCase("Sep") != 0 &&
+                    strMonth.compareToIgnoreCase("Oct") != 0 && strMonth.compareToIgnoreCase("Nov") != 0 && strMonth.compareToIgnoreCase("Dec") != 0) {
+                        strMonth = objScannerMonth.next();
+                    }
+
+            } while(strMonth.compareToIgnoreCase("January") != 0 && strMonth.compareToIgnoreCase("February") != 0 && strMonth.compareToIgnoreCase("March") != 0 &&
+                    strMonth.compareToIgnoreCase("April") != 0 && strMonth.compareToIgnoreCase("May") != 0 && strMonth.compareToIgnoreCase("June") != 0 &&
+                    strMonth.compareToIgnoreCase("July") != 0 && strMonth.compareToIgnoreCase("August") != 0 && strMonth.compareToIgnoreCase("September") != 0 &&
+                    strMonth.compareToIgnoreCase("October") != 0 && strMonth.compareToIgnoreCase("November") != 0 && strMonth.compareToIgnoreCase("December") != 0 &&
+                    strMonth.compareToIgnoreCase("Jan") != 0 && strMonth.compareToIgnoreCase("Feb") != 0 && strMonth.compareToIgnoreCase("Mar") != 0 &&
+                    strMonth.compareToIgnoreCase("Apr") != 0 && strMonth.compareToIgnoreCase("May") != 0 && strMonth.compareToIgnoreCase("Jun") != 0 &&
+                    strMonth.compareToIgnoreCase("Jul") != 0 && strMonth.compareToIgnoreCase("Aug") != 0 && strMonth.compareToIgnoreCase("Sep") != 0 &&
+                    strMonth.compareToIgnoreCase("Oct") != 0 && strMonth.compareToIgnoreCase("Nov") != 0 && strMonth.compareToIgnoreCase("Dec") != 0);
+            
+
+            System.out.println("Please enter a message.");
+            this.strMessage = objScannerMessage.nextLine();
+
+
+        }
+
+        public static void main(String [] strArgs) {
+            Memo objMemo = new Memo();
+            objMemo.setAll();
+            objMemo.aryMemos.add(objMemo.toString());
+            System.out.print(objMemo.aryMemos);
+        }
+}
