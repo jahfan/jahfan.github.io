@@ -1,0 +1,54 @@
+public class Question31 {
+    //
+// Name: Anthony Jackson
+// Date: 4/11/17
+// Program: Memo.java (Question 31)
+// Class with functions to get/set Year, Month and Messages. + a toString method. Main method to show how class works.
+//
+
+
+import java.util.ArrayList;
+
+public class Memo {
+
+        int intYear = 0000;
+        String strMonth = "None";
+        String strMessage = "Nothing";
+        
+        ArrayList<String> aryMemos = new ArrayList<String>(); 
+
+        public void setYear(int pintYear) {
+            this.intYear = pintYear;
+        }
+        public int getYear() {
+            return intYear;
+        }
+
+        public void setMonth(String pstrMonth) {
+            this.strMonth = pstrMonth;
+        }
+        public String getMonth() {
+            return strMonth;
+        }
+
+        public void setMessage(String pstrMessage) {
+            strMessage = pstrMessage;
+        }
+        public String getMessage() {
+            return strMessage;
+        }
+
+        public String toString() {
+            return strMonth + " " + intYear + ": " + strMessage;
+        }
+
+        public static void main(String [] strArgs) {
+            Memo objMemo = new Memo();
+            objMemo.setYear(1999);
+            objMemo.setMonth("November");
+            objMemo.setMessage("Ate Milk");
+            objMemo.aryMemos.add(objMemo.toString());
+            System.out.print(objMemo.aryMemos);
+        }
+}
+}
