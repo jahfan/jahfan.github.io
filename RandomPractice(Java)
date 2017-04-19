@@ -1,0 +1,49 @@
+
+public class EasterEgg {
+
+    char chrSymbol = '#';
+
+    public void setSymbol(char pchrSymbol) {
+        chrSymbol = pchrSymbol;
+    }
+    public char getSymbol() {
+        return chrSymbol;
+    }
+    @Deprecated
+    public void print(char pchrSymbol) {
+        setSymbol(pchrSymbol);
+        System.out.println(this);
+    }
+    public String toString() {
+        return "  __  \n" + " /" + getSymbol() + getSymbol() + "\\\n" + "/" + getSymbol() + getSymbol() + getSymbol() 
+               + getSymbol() + "\\\n" + "|" + getSymbol() + getSymbol() + getSymbol() + getSymbol() + "|\n" + "\\____/\n";
+    }
+    public EasterEgg(char pchrSymbol) {
+        setSymbol(pchrSymbol);
+    }
+    public EasterEgg() {
+        setSymbol('#');
+    }
+    public static void main(String[] strArgs) {
+        
+        EasterEgg objEggs = new EasterEgg();
+        EasterEgg objEgg2 = new EasterEgg('^');
+        EasterEgg objEgg3 = new EasterEgg('$');
+
+        System.out.print(objEggs);
+        System.out.print(objEgg2);
+        System.out.print(objEgg3);
+        
+        /*
+        objEggs.print('%');
+        objEggs.setSymbol('$');
+        System.out.print(objEggs);
+        objEggs.setSymbol('%');
+        System.out.print(objEggs);
+        objEggs.setSymbol('@');
+        System.out.print(objEggs);
+        objEggs.setSymbol('^');
+        System.out.print(objEggs);
+        */
+    }
+}
