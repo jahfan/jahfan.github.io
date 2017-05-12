@@ -1,14 +1,16 @@
-//
-// Name: Anthony Jackson
-// Date Last Edited: 4/4/17
-// Program: Exercise 16 
-// Description: A program that rolls two dice one thousand times and counts the number of times that a box car (two sixes) occurs.
-//
+import java.util.Random; //Imported the random package
 
+/**
+* @author: Anthony Jackson
+* @version: 1.0
+**/
 
-//Imported the random class
-import java.util.Random;
-
+/**
+* class that rolls a pair of dice 1000 and counts the occurence of box cars (pair of sixes)
+* class creates to random objects of #'s 1-6(dice)
+* class users for loop to roll both random objects 1000 times each
+* in foor loop after every roll checks to see if a boxcar occured if so, adds one to the variable that counts boxcar occurences
+**/
 public class Exercise16 {
 
     public static void main(String[] strArgs) {
