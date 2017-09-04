@@ -28,7 +28,7 @@ public class DiamondMaker {
 
         do{
             //Enter 3 for Project 1 required output.
-            System.out.println("Please enter an integer greater than 0 to determine the #  of triangles printed.");
+            System.out.println("Please enter an integer greater than 0 to determine the #  of triangles printed. (Enter 3 to meet Project1 requirements.)");
             intTriangleCounter = objNumScanner.nextInt();
         } while(intTriangleCounter <= 0);
     }
@@ -53,7 +53,7 @@ public class DiamondMaker {
                 while (intNumTrianglesStop <= intNumTriangles) {
                                 
                     if(intNumTrianglesStop == 0) {          
-                        for(int intSpace = intTopRows; intSpace > 0; intSpace--) {
+                        for(int intSpace = intTopRows+1; intSpace > 0; intSpace--) {
                             System.out.print(" ");
                         }
                         for(int intStars = 1; intStars <= intTop; intStars += 1) {
@@ -62,7 +62,7 @@ public class DiamondMaker {
                         intNumTrianglesStop++;            
                     }
                     else if (intNumTrianglesStop == intNumTriangles && intNumTrianglesStop != 0) {
-                        for(int intSpace = intTopRows; intSpace > 0; intSpace--) {
+                        for(int intSpace = intTopRows+1; intSpace > 0; intSpace--) {
                              System.out.print(" ");
                         }        
                         intTop += 2;
@@ -70,7 +70,7 @@ public class DiamondMaker {
                         System.out.print("\n");
                     } 
                     else {
-                        for(int intSpace = intTopRows*2; intSpace > 0; intSpace--) {
+                        for(int intSpace = (intTopRows*2)+1; intSpace > 0; intSpace--) {
                             System.out.print(" ");
                         }
                         for(int intStars = 1; intStars <= intTop; intStars += 1) {
@@ -88,7 +88,7 @@ public class DiamondMaker {
             while(intNumTrianglesStop <= intNumTriangles){
             
                 if(intNumTrianglesStop == 0) {
-                    for(int intSpace = 0; intSpace < intBottomRows; intSpace++) {
+                    for(int intSpace = 0; intSpace < intBottomRows+1; intSpace++) {
                          System.out.print(" ");
                     }
                     for(int intStars = intBottom; intStars >= 1; intStars -= 1){
@@ -97,7 +97,7 @@ public class DiamondMaker {
                     intNumTrianglesStop++;
                 }
                 else if(intNumTrianglesStop == intNumTriangles && intNumTrianglesStop != 0) {
-                    for(int intSpace = 0; intSpace < intBottomRows; intSpace++) {
+                    for(int intSpace = 0; intSpace < intBottomRows+1; intSpace++) {
                         System.out.print(" ");
                     } 
                     intBottom -=2;
@@ -105,7 +105,7 @@ public class DiamondMaker {
                     System.out.print("\n");
                 }
                 else {
-                    for(int intSpace = 0; intSpace < intBottomRows*2; intSpace++) {
+                    for(int intSpace = 0; intSpace < (intBottomRows*2)+1; intSpace++) {
                         System.out.print(" ");
                     }
                     for(int intStars = intBottom; intStars >= 1; intStars -= 1){
@@ -116,15 +116,7 @@ public class DiamondMaker {
             }
         }
     }
-
-    /*public String toString() {
-        
-        String strOutput = "";
-        strOutput += " " + printTriangle();
-
-        return strOutput;
-    }*/
-
+    
     public void Diamonds() {
         
         this.printTriangle();

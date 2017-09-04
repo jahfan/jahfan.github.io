@@ -1,0 +1,10 @@
+
+A single diamond is: (space) /stars\ (space)
+
+Two diamonds would be: (space) /stars\ (space*2) + 1 /stars\ (space)
+
+Three diamonds would be: (space) /stars\ (space*2) + 1 /stars\ (space*2) + 1 /stars\ (space)
+
+// The + 1 added to space*2 is to make the number of spaces odd and end at 1.
+// Space*2 b/c every triangle needs to keep the proper spacing to remain a triangle 
+
